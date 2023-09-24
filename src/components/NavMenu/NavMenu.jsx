@@ -1,3 +1,4 @@
+import './NavMenu.css'
 import NavHomePageButton from '../NavHomePageButton/NavHomePageButton'
 import NavMyPlaylistButton from '../NavMyPlaylistButton/NavMyPlaylistButton'
 import NavSighInButton from '../NavSighInButton/NavSighInButton'

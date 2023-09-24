@@ -1,3 +1,4 @@
+import './Sidebar.css'
 import MyProfile from '../MyProfile/MyProfile'
 
 function Sidebar() {
