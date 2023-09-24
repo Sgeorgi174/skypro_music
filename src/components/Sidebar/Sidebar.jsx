@@ -1,4 +1,3 @@
-import '../../App.css'
 import MyProfile from '../MyProfile/MyProfile'
 
 function Sidebar() {

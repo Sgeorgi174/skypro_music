@@ -1,5 +1,3 @@
-import '../../App.css'
-
 function AudioPlayer() {
   return (
     <div className="bar">

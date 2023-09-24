@@ -1,4 +1,3 @@
-import '../../App.css'
 import Track from '../Track/Track'
 import getTrackList from '../../modules/getTrackList'
 

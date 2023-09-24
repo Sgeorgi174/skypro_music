@@ -1,4 +1,3 @@
-import '../../App.css'
 import FilterBar from '../FilterBar/FillterBar'
 import Playlist from '../Playlist/Playlist'
 import SearchBar from '../SearchBar/SearchBar'
