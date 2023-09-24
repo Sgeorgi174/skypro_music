@@ -1,5 +1,5 @@
-const getTrackList = () => {
-  const Tracklist = [
+const getTracksList = () => {
+  const Trackslist = [
     {
       id: '1',
       image: 'img/icon/sprite.svg#icon-note',
@@ -110,7 +110,7 @@ const getTrackList = () => {
     },
   ]
 
-  return Tracklist
+  return Trackslist
 }
 
-export default getTrackList
+export default getTracksList

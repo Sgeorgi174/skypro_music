@@ -1,11 +1,10 @@
 import Track from '../Track/Track'
-import getTrackList from '../../modules/getTrackList'
+import getTracksList from '../../modules/getTrackList'
 
 function Playlist() {
-  const trackList = getTrackList()
   return (
     <div className="content__playlist playlist">
-      {trackList.map((track) => (
+      {getTracksList().map((track) => (
         <Track
           key={track.id}
           song={track.song}
