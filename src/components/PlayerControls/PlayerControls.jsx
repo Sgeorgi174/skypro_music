@@ -1,17 +1,13 @@
-import NextSongButton from '../NextSongButton/NextSongButton'
-import PlaySongButton from '../PlaySongButton/PlaySongButton'
-import PrevSongButton from '../PrevSongButton/PrevSongButton'
-import RepeatSongButton from '../RepeatSongButton/RepeatSongButton'
-import ShuffleSongsButton from '../ShuffleSongsButton/ShuffleSongsButton'
+import PlayerButton from '../PlayerButton/PlayerButton'
 
 function PlayerControls() {
   return (
     <div className="player__controls">
-      <PrevSongButton />
-      <PlaySongButton />
-      <NextSongButton />
-      <RepeatSongButton />
-      <ShuffleSongsButton />
+      <PlayerButton buttonName="prev" />
+      <PlayerButton buttonName="play" />
+      <PlayerButton buttonName="next" />
+      <PlayerButton buttonName="repeat" />
+      <PlayerButton buttonName="shuffle" />
     </div>
   )
 }
