@@ -1,10 +1,19 @@
-function ButtonForFilter({ buttonName, setVisibility, isVisible, list }) {
+function ButtonForFilter({
+  buttonName,
+  setVisibility,
+  isVisible,
+  list,
+  selected,
+  itemId,
+}) {
   return (
     <div className="filter__box">
       <div
         onClick={setVisibility}
         role="button"
-        className="filter__button  _btn-text"
+        className={`filter__button ${
+          selected === itemId ? 'filter__button_active' : ''
+        } _btn-text`}
       >
         {buttonName}
       </div>

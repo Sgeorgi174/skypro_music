@@ -80,6 +80,7 @@ nav {
 }
 .filter__dropdown-item:hover {
   color: #ad61ff;
+  text-decoration: underline;
 }
 
 .centerblock__content {
@@ -170,6 +171,11 @@ nav {
   border: 1px solid #ffffff;
   border-radius: 60px;
   padding: 6px 20px;
+}
+
+.filter__button_active {
+  border-color: #ad61ff;
+  color: #ad61ff;
 }
 
 .content__title {
