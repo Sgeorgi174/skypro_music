@@ -1,6 +1,6 @@
-function NavBurgerButton() {
+function NavBurgerButton({ handleClick }) {
   return (
-    <div className="nav__burger burger">
+    <div onClick={handleClick} role="button" className="nav__burger burger">
       <span className="burger__line" />
       <span className="burger__line" />
       <span className="burger__line" />

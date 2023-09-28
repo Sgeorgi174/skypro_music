@@ -1,9 +1,10 @@
 import './Tracklist.css'
+
 import FilterBar from '../FilterBar/FillterBar'
 import Playlist from '../Playlist/Playlist'
 import SearchBar from '../SearchBar/SearchBar'
 
-function Tracklist() {
+function Tracklist({ isLoading }) {
   return (
     <div className="main__centerblock centerblock">
       <SearchBar />
@@ -20,7 +21,7 @@ function Tracklist() {
             </svg>
           </div>
         </div>
-        <Playlist />
+        <Playlist isLoading={isLoading} />
       </div>
     </div>
   )
