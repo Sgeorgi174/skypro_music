@@ -64,9 +64,9 @@ nav {
 } */
 
 .filter__dropdown-toggle::-webkit-scrollbar {
-  width: 12px; /* ширина для вертикального скролла */
+  width: 5px; /* ширина для вертикального скролла */
   border-radius: 25px;
-  background-color: #143861;
+  background-color: #838383;
 }
 
 .filter__dropdown-toggle::-webkit-scrollbar-thumb {

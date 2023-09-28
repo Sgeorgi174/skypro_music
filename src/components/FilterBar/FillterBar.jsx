@@ -13,6 +13,14 @@ function FilterBar() {
     { id: '1', info: '2005' },
     { id: '2', info: '1987' },
     { id: '3', info: '1994' },
+    { id: '4', info: '2003' },
+    { id: '5', info: '2002' },
+    { id: '6', info: '1989' },
+    { id: '7', info: '1992' },
+    { id: '8', info: '2023' },
+    { id: '9', info: '2020' },
+    { id: '10', info: '2007' },
+    { id: '11', info: '1989' },
   ]
 
   const genresList = [
@@ -20,6 +28,10 @@ function FilterBar() {
     { id: '1', info: 'классика' },
     { id: '2', info: 'рок' },
     { id: '3', info: 'танцевальная' },
+    { id: '4', info: 'кантри' },
+    { id: '5', info: 'блюз' },
+    { id: '6', info: 'регги' },
+    { id: '7', info: 'фанк' },
   ]
 
   const [isVisibleFirst, setVisibilityFirst] = useState(false)
