@@ -1,11 +1,12 @@
 import Track from '../Track/Track'
 import getTracksList from '../../modules/getTrackList'
 
-function Playlist() {
+function Playlist({ isLoading }) {
   return (
     <div className="content__playlist playlist">
       {getTracksList().map((track) => (
         <Track
+          isLoading={isLoading}
           key={track.id}
           song={track.song}
           author={track.author}
