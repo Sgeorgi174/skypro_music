@@ -1,7 +1,7 @@
 import './AudioPlayer.css'
-import PlayTrackBar from '../PlayTrackBar/PlayTrackBar'
-import PlayerControls from '../PlayerControls/PlayerControls'
-import VolumeBar from '../VolumeBar/VolumeBar'
+import { PlayTrackBar } from '../PlayTrackBar/PlayTrackBar'
+import { PlayerControls } from '../PlayerControls/PlayerControls'
+import { VolumeBar } from '../VolumeBar/VolumeBar'
 
 function AudioPlayer() {
   return (

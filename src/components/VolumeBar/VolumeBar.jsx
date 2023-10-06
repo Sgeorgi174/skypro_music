@@ -1,4 +1,4 @@
-function VolumeBar() {
+export function VolumeBar() {
   return (
     <div className="bar__volume-block volume">
       <div className="volume__content">
@@ -18,5 +18,3 @@ function VolumeBar() {
     </div>
   )
 }
-
-export default VolumeBar

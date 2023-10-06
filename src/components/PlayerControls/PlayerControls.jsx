@@ -1,15 +1,14 @@
-import PlayerButton from '../PlayerButton/PlayerButton'
+import { PlayerButton } from '../PlayerButton/PlayerButton'
+import * as S from './PlayerControls.styles'
 
-function PlayerControls() {
+export function PlayerControls() {
   return (
-    <div className="player__controls">
+    <S.PlayerControls>
       <PlayerButton buttonName="prev" />
       <PlayerButton buttonName="play" />
       <PlayerButton buttonName="next" />
       <PlayerButton buttonName="repeat" />
       <PlayerButton buttonName="shuffle" />
-    </div>
+    </S.PlayerControls>
   )
 }
-
-export default PlayerControls
