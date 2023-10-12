@@ -1,34 +1,30 @@
 import { useState } from 'react'
-import './NavMenu.css'
-import NavHomePageButton from '../NavHomePageButton/NavHomePageButton'
-import NavMyPlaylistButton from '../NavMyPlaylistButton/NavMyPlaylistButton'
-import NavSighInButton from '../NavSighInButton/NavSighInButton'
-import NavBurgerButton from '../NavBurgerButton/NavBurgerButton'
+import * as S from './NavMenu.styled'
+import { NavBurgerButton } from '../NavBurgerButton/NavBurgerButton'
+import { NavButton } from '../NavButtons/NavButtons'
 
-function NavMenu() {
+export function NavMenu() {
   const [isVilible, setVisibility] = useState(true)
 
   return (
-    <nav className="main__nav nav">
-      <div className="nav__logo logo">
-        <img className="logo__image" src="img/logo.png" alt="logo" />
-      </div>
+    <S.MainNav>
+      <S.NavLogo>
+        <S.LogoImg src="img/logo.png" alt="logo" />
+      </S.NavLogo>
       <NavBurgerButton
         handleClick={() => {
           setVisibility(!isVilible)
         }}
       />
-      <div className="nav__menu menu">
+      <S.NavMenu>
         {isVilible && (
-          <ul className="menu__list">
-            <NavHomePageButton />
-            <NavMyPlaylistButton />
-            <NavSighInButton />
-          </ul>
+          <S.MenuList>
+            <NavButton Name="Главное" Link="/#" />
+            <NavButton Name="Мой плейлист" Link="/#" />
+            <NavButton Name="Войти" Link="/#" />
+          </S.MenuList>
         )}
-      </div>
-    </nav>
+      </S.NavMenu>
+    </S.MainNav>
   )
 }
-
-export default NavMenu

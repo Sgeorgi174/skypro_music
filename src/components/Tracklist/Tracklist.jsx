@@ -1,30 +1,27 @@
-import './Tracklist.css'
+import * as S from './Tracklist.styled'
+import { FilterBar } from '../FilterBar/FillterBar'
+import { Playlist } from '../Playlist/Playlist'
+import { SearchBar } from '../SearchBar/SearchBar'
 
-import FilterBar from '../FilterBar/FillterBar'
-import Playlist from '../Playlist/Playlist'
-import SearchBar from '../SearchBar/SearchBar'
-
-function Tracklist({ isLoading }) {
+export function Tracklist({ isLoading }) {
   return (
-    <div className="main__centerblock centerblock">
+    <S.MainCenterblock>
       <SearchBar />
-      <h2 className="centerblock__h2">Треки</h2>
+      <S.CenterblockH2>Треки</S.CenterblockH2>
       <FilterBar />
-      <div className="centerblock__content">
-        <div className="content__title playlist-title">
-          <div className="playlist-title__col col01">Трек</div>
-          <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
-          <div className="playlist-title__col col03">АЛЬБОМ</div>
-          <div className="playlist-title__col col04">
-            <svg className="playlist-title__svg" alt="time">
+      <S.CenterblockContent>
+        <S.ContentTitle>
+          <S.PlaylistTitleCol Name="col01">Трек</S.PlaylistTitleCol>
+          <S.PlaylistTitleCol Name="col02">ИСПОЛНИТЕЛЬ</S.PlaylistTitleCol>
+          <S.PlaylistTitleCol Name="col03">АЛЬБОМ</S.PlaylistTitleCol>
+          <S.PlaylistTitleCol Name="col04">
+            <S.PlaylistTitleSvg alt="time">
               <use xlinkHref="img/icon/sprite.svg#icon-watch" />
-            </svg>
-          </div>
-        </div>
+            </S.PlaylistTitleSvg>
+          </S.PlaylistTitleCol>
+        </S.ContentTitle>
         <Playlist isLoading={isLoading} />
-      </div>
-    </div>
+      </S.CenterblockContent>
+    </S.MainCenterblock>
   )
 }
-
-export default Tracklist

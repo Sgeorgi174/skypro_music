@@ -1,11 +1,11 @@
-function SidebarLogOutButton() {
+import * as S from './SidebarLogOutButton.styled'
+
+export function SidebarLogOutButton() {
   return (
-    <div className="sidebar__icon">
+    <S.SidebarIcon>
       <svg alt="logout">
         <use xlinkHref="img/icon/sprite.svg#logout" />
       </svg>
-    </div>
+    </S.SidebarIcon>
   )
 }
-
-export default SidebarLogOutButton

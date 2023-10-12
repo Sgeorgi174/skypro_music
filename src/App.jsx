@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import './App.css'
-import AudioPlayer from './components/AudioPlayer/AudioPlayer'
-import NavMenu from './components/NavMenu/NavMenu'
-import Sidebar from './components/Sidebar/Sidebar'
-import Tracklist from './components/Tracklist/Tracklist'
+import * as S from './App.styled'
+import { AudioPlayer } from './components/AudioPlayer/AudioPlayer'
+import { NavMenu } from './components/NavMenu/NavMenu'
+import { Sidebar } from './components/Sidebar/Sidebar'
+import { Tracklist } from './components/Tracklist/Tracklist'
 import delay from './modules/delay'
 
 function App() {
@@ -16,19 +16,17 @@ function App() {
   }, [false])
 
   return (
-    <div className="app">
-      <div className="wrapper">
-        <div className="container">
-          <main className="main">
-            <NavMenu />
-            <Tracklist isLoading={isLoading} />
-            <Sidebar isLoading={isLoading} />
-          </main>
-          <AudioPlayer />
-          <footer className="footer" />
-        </div>
-      </div>
-    </div>
+    <S.Wrapper>
+      <S.Container>
+        <S.Main>
+          <NavMenu />
+          <Tracklist isLoading={isLoading} />
+          <Sidebar isLoading={isLoading} />
+        </S.Main>
+        <AudioPlayer />
+        <footer />
+      </S.Container>
+    </S.Wrapper>
   )
 }
 

@@ -1,9 +1,10 @@
-import Track from '../Track/Track'
+import { Track } from '../Track/Track'
 import getTracksList from '../../modules/getTrackList'
+import * as S from './Playlist.styled'
 
-function Playlist({ isLoading }) {
+export function Playlist({ isLoading }) {
   return (
-    <div className="content__playlist playlist">
+    <S.ContentPlaylist>
       {getTracksList().map((track) => (
         <Track
           isLoading={isLoading}
@@ -15,8 +16,6 @@ function Playlist({ isLoading }) {
           time={track.time}
         />
       ))}
-    </div>
+    </S.ContentPlaylist>
   )
 }
-
-export default Playlist
