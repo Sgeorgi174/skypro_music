@@ -1,13 +1,11 @@
-function PlayerButton(props) {
+import * as S from './PlayerButton.styles'
+
+export function PlayerButton(props) {
   return (
-    <div className={`player__btn-${props.buttonName} _btn`}>
-      <svg
-        className={`player__btn-${props.buttonName}-svg alt="${props.buttonName}`}
-      >
+    <S.PlayerBtn buttonName={props.buttonName}>
+      <S.PlayerBtnSvg buttonName={props.buttonName}>
         <use xlinkHref={`img/icon/sprite.svg#icon-${props.buttonName}`} />
-      </svg>
-    </div>
+      </S.PlayerBtnSvg>
+    </S.PlayerBtn>
   )
 }
-
-export default PlayerButton

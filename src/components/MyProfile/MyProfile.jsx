@@ -1,12 +1,11 @@
-import SidebarLogOutButton from '../SidebarLogOutButton/SidebarLogOutButton'
+import { SidebarLogOutButton } from '../SidebarLogOutButton/SidebarLogOutButton'
+import * as S from './MyProfile.styled'
 
-function MyProfile() {
+export function MyProfile() {
   return (
-    <div className="sidebar__personal">
-      <p className="sidebar__personal-name">Sergey.Ivanov</p>
+    <S.SideBarPersonal>
+      <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
       <SidebarLogOutButton />
-    </div>
+    </S.SideBarPersonal>
   )
 }
-
-export default MyProfile

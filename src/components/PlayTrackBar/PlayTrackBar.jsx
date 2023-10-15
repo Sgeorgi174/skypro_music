@@ -1,38 +1,34 @@
-function PlayTrackBar() {
-  return (
-    <div className="player__track-play track-play">
-      <div className="track-play__contain">
-        <div className="track-play__image">
-          <svg className="track-play__svg" alt="music">
-            <use xlinkHref="img/icon/sprite.svg#icon-note" />
-          </svg>
-        </div>
-        <div className="track-play__author">
-          <a className="track-play__author-link" href="http://">
-            Ты та...
-          </a>
-        </div>
-        <div className="track-play__album">
-          <a className="track-play__album-link" href="http://">
-            Баста
-          </a>
-        </div>
-      </div>
+import * as S from './PlayTrackBar.styles'
 
-      <div className="track-play__like-dis">
-        <div className="track-play__like _btn-icon">
-          <svg className="track-play__like-svg" alt="like">
+export function PlayTrackBar() {
+  return (
+    <S.PlayerTrackPlay>
+      <S.TrackPlayContain>
+        <S.TrackPlayImage>
+          <S.TrackPlaySvg alt="music">
+            <use xlinkHref="img/icon/sprite.svg#icon-note" />
+          </S.TrackPlaySvg>
+        </S.TrackPlayImage>
+        <S.TrackPlayAuthor>
+          <S.TrackPlayAuthorLink href="http://">Ты та...</S.TrackPlayAuthorLink>
+        </S.TrackPlayAuthor>
+        <S.TrackPlayAlbum>
+          <S.TrackPlayAlbumLink href="http://">Баста</S.TrackPlayAlbumLink>
+        </S.TrackPlayAlbum>
+      </S.TrackPlayContain>
+
+      <S.TrackPlayLikeDis>
+        <S.TrackPlayLike className="_btn-icon">
+          <S.TrackPlayLikeSvg alt="like">
             <use xlinkHref="img/icon/sprite.svg#icon-like" />
-          </svg>
-        </div>
-        <div className="track-play__dislike _btn-icon">
-          <svg className="track-play__dislike-svg" alt="dislike">
+          </S.TrackPlayLikeSvg>
+        </S.TrackPlayLike>
+        <S.TrackPlayDislike className="_btn-icon">
+          <S.TrackPlayDislikeSvg alt="dislike">
             <use xlinkHref="img/icon/sprite.svg#icon-dislike" />
-          </svg>
-        </div>
-      </div>
-    </div>
+          </S.TrackPlayDislikeSvg>
+        </S.TrackPlayDislike>
+      </S.TrackPlayLikeDis>
+    </S.PlayerTrackPlay>
   )
 }
-
-export default PlayTrackBar

@@ -1,4 +1,6 @@
-function ButtonForFilter({
+import * as S from './ButtonForFilter.styled'
+
+export function ButtonForFilter({
   buttonName,
   setVisibility,
   isVisible,
@@ -7,29 +9,25 @@ function ButtonForFilter({
   itemId,
 }) {
   return (
-    <div className="filter__box">
-      <div
+    <S.FilterBox>
+      <S.FilterButton
         onClick={setVisibility}
         role="button"
-        className={`filter__button ${
-          selected === itemId ? 'filter__button_active' : ''
-        } _btn-text`}
+        className="_btn-text"
+        selected={selected}
+        itemID={itemId}
       >
         {buttonName}
-      </div>
+      </S.FilterButton>
       {isVisible && (
-        <ul className="filter__dropdown-toggle">
+        <S.FilterDropdownToggle>
           {list.map((item) => (
             <li key={item.id}>
-              <a className="filter__dropdown-item" href="/#">
-                {item.info}
-              </a>
+              <S.FilterDropdownItem href="/#">{item.info}</S.FilterDropdownItem>
             </li>
           ))}
-        </ul>
+        </S.FilterDropdownToggle>
       )}
-    </div>
+    </S.FilterBox>
   )
 }
-
-export default ButtonForFilter
