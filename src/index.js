@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
 import { createGlobalStyle } from 'styled-components'
-import App from './App'
+import { App } from './App'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -51,6 +51,7 @@ body {
   height: 100%;
   font-family: 'StratosSkyeng', sans-serif;
   color: #ffffff;
+  background-color: #383838;
 }
 
 ._btn-text:hover {

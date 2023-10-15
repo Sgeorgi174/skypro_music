@@ -19,9 +19,9 @@ export function NavMenu() {
       <S.NavMenu>
         {isVilible && (
           <S.MenuList>
-            <NavButton Name="Главное" Link="/#" />
-            <NavButton Name="Мой плейлист" Link="/#" />
-            <NavButton Name="Войти" Link="/#" />
+            <NavButton Name="Главное" Link="/" />
+            <NavButton Name="Мой плейлист" Link="/playlist" />
+            <NavButton Name="Войти" Link="/login" />
           </S.MenuList>
         )}
       </S.NavMenu>

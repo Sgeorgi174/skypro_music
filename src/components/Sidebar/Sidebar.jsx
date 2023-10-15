@@ -11,7 +11,7 @@ export function Sidebar({ isLoading }) {
             {isLoading ? (
               <S.Skeletons />
             ) : (
-              <S.SideBarLink href="/#">
+              <S.SideBarLink to="/category/day's-playlist">
                 <S.SideBarImg src="img/playlist01.png" alt="day's playlist" />
               </S.SideBarLink>
             )}
@@ -20,7 +20,7 @@ export function Sidebar({ isLoading }) {
             {isLoading ? (
               <S.Skeletons />
             ) : (
-              <S.SideBarLink href="/#">
+              <S.SideBarLink to="/category/100hits">
                 <S.SideBarImg src="img/playlist02.png" alt="day's playlist" />
               </S.SideBarLink>
             )}
@@ -29,7 +29,7 @@ export function Sidebar({ isLoading }) {
             {isLoading ? (
               <S.Skeletons />
             ) : (
-              <S.SideBarLink href="/#">
+              <S.SideBarLink to="/category/indi">
                 <S.SideBarImg src="img/playlist03.png" alt="day's playlist" />
               </S.SideBarLink>
             )}
