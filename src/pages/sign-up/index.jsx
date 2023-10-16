@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './SignUp.styled.css'
 
-export function SignUp() {
+export function SignUp({ setAllowed }) {
   return (
     <div className="wrapper">
       <div className="container-signup">
@@ -31,7 +31,15 @@ export function SignUp() {
               placeholder="Повторите пароль"
             />
             <button type="button" className="modal__btn-signup-ent">
-              <Link to="/">Зарегистрироваться</Link>
+              <Link
+                onClick={() => {
+                  localStorage.setItem('user', 'true')
+                  setAllowed(true)
+                }}
+                to="/login"
+              >
+                Зарегистрироваться
+              </Link>
             </button>
           </form>
         </div>
