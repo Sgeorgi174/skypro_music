@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './SignUp.styled.css'
 
-export function SignUp({ setAllowed }) {
+export function SignUp() {
   return (
     <div className="wrapper">
       <div className="container-signup">
@@ -34,7 +34,6 @@ export function SignUp({ setAllowed }) {
               <Link
                 onClick={() => {
                   localStorage.setItem('user', 'true')
-                  setAllowed(true)
                 }}
                 to="/login"
               >

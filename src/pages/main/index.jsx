@@ -8,7 +8,6 @@ import delay from '../../modules/delay'
 
 export function MainPage() {
   const [isLoading, setLoadingStatus] = useState(true)
-
   useEffect(() => {
     delay(5000).then(() => {
       setLoadingStatus(!isLoading)
