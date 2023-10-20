@@ -12,6 +12,7 @@ export function MainPage() {
   const [isLoading, setLoadingStatus] = useState(true)
   const [isPlayed, setPlay] = useState(false)
   const [track, setTrack] = useState(null)
+  const [isError, setError] = useState(false)
 
   useEffect(() => {
     setLoadingStatus(true)
@@ -21,9 +22,9 @@ export function MainPage() {
         setTrackList(tracks)
         setLoadingStatus(false)
       })
-      .catch((error) => {
-        alert(error.message)
+      .catch(() => {
         setLoadingStatus(false)
+        setError(true)
       })
   }, [])
 
@@ -33,6 +34,7 @@ export function MainPage() {
         <S.Main>
           <NavMenu />
           <Tracklist
+            isError={isError}
             trackList={trackList}
             setTrackList={setTrackList}
             isLoading={isLoading}

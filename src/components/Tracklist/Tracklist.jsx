@@ -10,6 +10,7 @@ export function Tracklist({
   setTrackList,
   setPlay,
   setTrack,
+  isError,
 }) {
   return (
     <S.MainCenterblock>
@@ -17,24 +18,31 @@ export function Tracklist({
       <S.CenterblockH2>Треки</S.CenterblockH2>
       <FilterBar trackList={trackList} />
       <S.CenterblockContent>
-        <S.ContentTitle>
-          <S.PlaylistTitleCol Name="col01">Трек</S.PlaylistTitleCol>
-          <S.PlaylistTitleCol Name="col02">ИСПОЛНИТЕЛЬ</S.PlaylistTitleCol>
-          <S.PlaylistTitleCol Name="col03">АЛЬБОМ</S.PlaylistTitleCol>
-          <S.PlaylistTitleCol Name="col04">
-            <S.PlaylistTitleSvg alt="time">
-              <use xlinkHref="img/icon/sprite.svg#icon-watch" />
-            </S.PlaylistTitleSvg>
-          </S.PlaylistTitleCol>
-        </S.ContentTitle>
-        <Playlist
-          isLoading={isLoading}
-          trackList={trackList}
-          setTrackList={setTrackList}
-          setLoadingStatus={setLoadingStatus}
-          setPlay={setPlay}
-          setTrack={setTrack}
-        />
+        {isError ? (
+          <div>НЕ УДАЛОСЬ ЗАГРУЗИТЬ ПЛЕЙЛИСТ</div>
+        ) : (
+          <>
+            {' '}
+            <S.ContentTitle>
+              <S.PlaylistTitleCol Name="col01">Трек</S.PlaylistTitleCol>
+              <S.PlaylistTitleCol Name="col02">ИСПОЛНИТЕЛЬ</S.PlaylistTitleCol>
+              <S.PlaylistTitleCol Name="col03">АЛЬБОМ</S.PlaylistTitleCol>
+              <S.PlaylistTitleCol Name="col04">
+                <S.PlaylistTitleSvg alt="time">
+                  <use xlinkHref="img/icon/sprite.svg#icon-watch" />
+                </S.PlaylistTitleSvg>
+              </S.PlaylistTitleCol>
+            </S.ContentTitle>
+            <Playlist
+              isLoading={isLoading}
+              trackList={trackList}
+              setTrackList={setTrackList}
+              setLoadingStatus={setLoadingStatus}
+              setPlay={setPlay}
+              setTrack={setTrack}
+            />
+          </>
+        )}
       </S.CenterblockContent>
     </S.MainCenterblock>
   )
