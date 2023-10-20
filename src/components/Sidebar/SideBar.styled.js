@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const MainSidebar = styled.div`
@@ -52,8 +53,7 @@ export const Skeletons = styled.div`
   animation: gradient 5s ease infinite;
   transform: translate3d(0, 0, 0);
 `
-
-export const SideBarLink = styled.a`
+export const SideBarLink = styled(Link)`
   width: 100%;
   height: 100%;
 `

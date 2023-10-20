@@ -1,10 +1,31 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate, Outlet } from 'react-router-dom'
+import { MainPage } from './pages/main'
+import { Page404 } from './pages/not-found'
+import { SignIn } from './pages/sign-in'
+import { SignUp } from './pages/sign-up'
+import { MyPlaylist } from './pages/playlist'
+import { MyCategory } from './pages/category'
 
-export const AppRoutes = () => {
+export function ProtectedRoute({ redirectPath = '/login' }) {
+  const isUser = localStorage.getItem('user')
+  if (!isUser) {
+    return <Navigate to={redirectPath} replace />
+  }
+
+  return <Outlet />
+}
+
+export function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="/about" element={<About />} />
+      <Route element={<ProtectedRoute />}>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/playlist" element={<MyPlaylist />} />
+        <Route path="/category/:id" element={<MyCategory />} />
+      </Route>
+      <Route path="/login" element={<SignIn />} />
+      <Route path="/registration" element={<SignUp />} />
+      <Route path="*" element={<Page404 />} />
     </Routes>
   )
 }
