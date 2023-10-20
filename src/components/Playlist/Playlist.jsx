@@ -1,19 +1,20 @@
 import { Track } from '../Track/Track'
-import getTracksList from '../../modules/getTrackList'
 import * as S from './Playlist.styled'
+import { correctTime } from '../../modules/correctTime'
 
-export function Playlist({ isLoading }) {
+export function Playlist({ isLoading, trackList, setPlay, setTrack }) {
   return (
     <S.ContentPlaylist>
-      {getTracksList().map((track) => (
+      {trackList.map((track) => (
         <Track
+          setTrack={setTrack}
           isLoading={isLoading}
           key={track.id}
-          song={track.song}
+          song={track.name}
           author={track.author}
           album={track.album}
-          moreInfo={track.moreInfo}
-          time={track.time}
+          time={correctTime(track.duration_in_seconds)}
+          setPlay={setPlay}
         />
       ))}
     </S.ContentPlaylist>

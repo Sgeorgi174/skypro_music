@@ -3,12 +3,19 @@ import { FilterBar } from '../FilterBar/FillterBar'
 import { Playlist } from '../Playlist/Playlist'
 import { SearchBar } from '../SearchBar/SearchBar'
 
-export function Tracklist({ isLoading }) {
+export function Tracklist({
+  isLoading,
+  setLoadingStatus,
+  trackList,
+  setTrackList,
+  setPlay,
+  setTrack,
+}) {
   return (
     <S.MainCenterblock>
       <SearchBar />
       <S.CenterblockH2>Треки</S.CenterblockH2>
-      <FilterBar />
+      <FilterBar trackList={trackList} />
       <S.CenterblockContent>
         <S.ContentTitle>
           <S.PlaylistTitleCol Name="col01">Трек</S.PlaylistTitleCol>
@@ -20,7 +27,14 @@ export function Tracklist({ isLoading }) {
             </S.PlaylistTitleSvg>
           </S.PlaylistTitleCol>
         </S.ContentTitle>
-        <Playlist isLoading={isLoading} />
+        <Playlist
+          isLoading={isLoading}
+          trackList={trackList}
+          setTrackList={setTrackList}
+          setLoadingStatus={setLoadingStatus}
+          setPlay={setPlay}
+          setTrack={setTrack}
+        />
       </S.CenterblockContent>
     </S.MainCenterblock>
   )
