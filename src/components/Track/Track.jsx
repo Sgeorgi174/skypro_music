@@ -14,7 +14,11 @@ export function Track(props) {
             <S.TrackTitleLink
               onClick={() => {
                 props.setPlay(true)
-                props.setTrack({ name: props.song, author: props.author })
+                props.setTrack({
+                  name: props.song,
+                  author: props.author,
+                  trackLink: props.trackFile,
+                })
               }}
               isLoading={props.isLoading}
             >

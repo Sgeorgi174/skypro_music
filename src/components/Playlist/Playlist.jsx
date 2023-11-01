@@ -15,6 +15,7 @@ export function Playlist({ isLoading, trackList, setPlay, setTrack }) {
           album={track.album}
           time={correctTime(track.duration_in_seconds)}
           setPlay={setPlay}
+          trackFile={track.track_file}
         />
       ))}
     </S.ContentPlaylist>
