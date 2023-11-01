@@ -1,6 +1,6 @@
 import * as S from './PlayTrackBar.styles'
 
-export function PlayTrackBar() {
+export function PlayTrackBar({ track }) {
   return (
     <S.PlayerTrackPlay>
       <S.TrackPlayContain>
@@ -10,10 +10,14 @@ export function PlayTrackBar() {
           </S.TrackPlaySvg>
         </S.TrackPlayImage>
         <S.TrackPlayAuthor>
-          <S.TrackPlayAuthorLink href="http://">Ты та...</S.TrackPlayAuthorLink>
+          <S.TrackPlayAuthorLink href="http://">
+            {track ? track.author : ''}
+          </S.TrackPlayAuthorLink>
         </S.TrackPlayAuthor>
         <S.TrackPlayAlbum>
-          <S.TrackPlayAlbumLink href="http://">Баста</S.TrackPlayAlbumLink>
+          <S.TrackPlayAlbumLink href="http://">
+            {track ? track.name : ''}
+          </S.TrackPlayAlbumLink>
         </S.TrackPlayAlbum>
       </S.TrackPlayContain>
 

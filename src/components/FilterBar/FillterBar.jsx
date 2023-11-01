@@ -1,39 +1,22 @@
 import { useState } from 'react'
 import { ButtonForFilter } from '../AuthorButtonForFilter/ButtonForFilter'
-import getTracksList from '../../modules/getTrackList'
 import * as S from './FilterBar.styled'
 
-export function FilterBar() {
-  const authorList = getTracksList().map((track) => ({
+export function FilterBar({ trackList }) {
+  const authorList = trackList.map((track) => ({
     info: track.author,
     id: track.id,
   }))
 
-  const yearsList = [
-    { id: '0', info: '2001' },
-    { id: '1', info: '2005' },
-    { id: '2', info: '1987' },
-    { id: '3', info: '1994' },
-    { id: '4', info: '2003' },
-    { id: '5', info: '2002' },
-    { id: '6', info: '1989' },
-    { id: '7', info: '1992' },
-    { id: '8', info: '2023' },
-    { id: '9', info: '2020' },
-    { id: '10', info: '2007' },
-    { id: '11', info: '1989' },
-  ]
+  const yearsList = trackList.map((track) => ({
+    info: track.release_date,
+    id: track.id,
+  }))
 
-  const genresList = [
-    { id: '0', info: 'хип-хоп' },
-    { id: '1', info: 'классика' },
-    { id: '2', info: 'рок' },
-    { id: '3', info: 'танцевальная' },
-    { id: '4', info: 'кантри' },
-    { id: '5', info: 'блюз' },
-    { id: '6', info: 'регги' },
-    { id: '7', info: 'фанк' },
-  ]
+  const genresList = trackList.map((track) => ({
+    info: track.genre,
+    id: track.id,
+  }))
 
   const [isVisibleFirst, setVisibilityFirst] = useState(false)
   const [isVisibleSecond, setVisibilitySecond] = useState(false)

@@ -3,7 +3,7 @@ import { PlayerControls } from '../PlayerControls/PlayerControls'
 import { VolumeBar } from '../VolumeBar/VolumeBar'
 import * as S from './AudioPlayer.styled'
 
-export function AudioPlayer() {
+export function AudioPlayer({ track }) {
   return (
     <S.Bar>
       <S.BarContent>
@@ -11,7 +11,7 @@ export function AudioPlayer() {
         <S.BarPlayerBlock>
           <S.BarPlayer>
             <PlayerControls />
-            <PlayTrackBar />
+            <PlayTrackBar track={track} />
           </S.BarPlayer>
           <VolumeBar />
         </S.BarPlayerBlock>

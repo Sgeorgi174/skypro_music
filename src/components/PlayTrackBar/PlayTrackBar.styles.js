@@ -3,14 +3,13 @@ import styled from 'styled-components'
 export const PlayerTrackPlay = styled.div`
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 `
 export const TrackPlayContain = styled.div`
-  width: auto;
+  min-width: 250px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
@@ -49,7 +48,7 @@ export const TrackPlayAuthor = styled.div`
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: author;
-  min-width: 49px;
+  max-width: 250px;
 `
 export const TrackPlayAuthorLink = styled.a`
   font-style: normal;

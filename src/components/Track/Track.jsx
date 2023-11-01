@@ -11,11 +11,15 @@ export function Track(props) {
             </S.TrackTitleSvg>
           </S.TrackTitleImage>
           <S.TrackTitleText isLoading={props.isLoading}>
-            <S.TrackTitleLink isLoading={props.isLoading} href="http://">
+            <S.TrackTitleLink
+              onClick={() => {
+                props.setPlay(true)
+                props.setTrack({ name: props.song, author: props.author })
+              }}
+              isLoading={props.isLoading}
+            >
               {props.isLoading ? 'waitingTrack' : props.song}{' '}
-              <S.TrackTitleSpan>
-                {props.isLoading ? '' : props.moreInfo}
-              </S.TrackTitleSpan>
+              <S.TrackTitleSpan />
             </S.TrackTitleLink>
           </S.TrackTitleText>
         </S.TrackTitle>
