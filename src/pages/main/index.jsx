@@ -37,12 +37,12 @@ export function MainPage() {
             isError={isError}
             trackList={trackList}
             setTrackList={setTrackList}
-            isLoading={isLoading}
+            $isLoading={isLoading}
             setLoadingStatus={setLoadingStatus}
             setPlay={setPlay}
             setTrack={setTrack}
           />
-          <Sidebar isLoading={isLoading} />
+          <Sidebar $isLoading={isLoading} />
         </S.Main>
         {isPlayed && <AudioPlayer track={track} />}
         <footer />

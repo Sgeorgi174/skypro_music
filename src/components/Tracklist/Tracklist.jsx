@@ -4,7 +4,7 @@ import { Playlist } from '../Playlist/Playlist'
 import { SearchBar } from '../SearchBar/SearchBar'
 
 export function Tracklist({
-  isLoading,
+  $isLoading,
   setLoadingStatus,
   trackList,
   setTrackList,
@@ -24,17 +24,17 @@ export function Tracklist({
           <>
             {' '}
             <S.ContentTitle>
-              <S.PlaylistTitleCol Name="col01">Трек</S.PlaylistTitleCol>
-              <S.PlaylistTitleCol Name="col02">ИСПОЛНИТЕЛЬ</S.PlaylistTitleCol>
-              <S.PlaylistTitleCol Name="col03">АЛЬБОМ</S.PlaylistTitleCol>
-              <S.PlaylistTitleCol Name="col04">
+              <S.PlaylistTitleCol $col="col01">Трек</S.PlaylistTitleCol>
+              <S.PlaylistTitleCol $col="col02">ИСПОЛНИТЕЛЬ</S.PlaylistTitleCol>
+              <S.PlaylistTitleCol $col="col03">АЛЬБОМ</S.PlaylistTitleCol>
+              <S.PlaylistTitleCol $col="col04">
                 <S.PlaylistTitleSvg alt="time">
                   <use xlinkHref="img/icon/sprite.svg#icon-watch" />
                 </S.PlaylistTitleSvg>
               </S.PlaylistTitleCol>
             </S.ContentTitle>
             <Playlist
-              isLoading={isLoading}
+              $isLoading={$isLoading}
               trackList={trackList}
               setTrackList={setTrackList}
               setLoadingStatus={setLoadingStatus}

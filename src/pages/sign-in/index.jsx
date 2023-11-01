@@ -1,38 +1,32 @@
 import { Link } from 'react-router-dom'
-import './SignIn.styled.css'
+import * as S from './index.styled'
 
 export function SignIn() {
   return (
-    <div className="wrapper">
-      <div className="container-enter">
-        <div className="modal__block">
-          <form className="modal__form-login" action="#">
+    <S.Wrapper>
+      <S.ContainerEnter>
+        <S.ModalBlock>
+          <S.ModalFormLogin action="#">
             <a href="../">
-              <div className="modal__logo">
-                <img src="../img/logo_modal.png" alt="logo" />
-              </div>
+              <S.ModalLogo>
+                <S.ModalLogoImg src="../img/logo_modal.png" alt="logo" />
+              </S.ModalLogo>
             </a>
-            <input
-              className="modal__input login"
-              type="text"
-              name="login"
-              placeholder="Почта"
-            />
-            <input
-              className="modal__input password"
+            <S.ModalInputLogin type="text" name="login" placeholder="Почта" />
+            <S.ModalInput
               type="password"
               name="password"
               placeholder="Пароль"
             />
-            <button type="button" className="modal__btn-enter">
+            <S.ModalBtnEnter type="button">
               <Link to="/">Войти</Link>
-            </button>
-            <button type="button" className="modal__btn-signup">
+            </S.ModalBtnEnter>
+            <S.ModalBtnSignup type="button">
               <Link to="/registration">Зарегистрироваться</Link>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+            </S.ModalBtnSignup>
+          </S.ModalFormLogin>
+        </S.ModalBlock>
+      </S.ContainerEnter>
+    </S.Wrapper>
   )
 }

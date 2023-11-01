@@ -49,13 +49,13 @@ export const PlaylistTitleCol = styled.div`
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: 2px;
+  letter-spacing: 2px;$
   color: #696969;
   text-transform: uppercase;
-  ${(props) => (props.Name === 'col01' ? 'width: 447px;' : '')}
-  ${(props) => (props.Name === 'col02' ? 'width: 321px;' : '')}
-  ${(props) => (props.Name === 'col03' ? 'width: 245px;' : '')}
-  ${(props) => (props.Name === 'col04' ? 'width: 60px;text-align: end;' : '')}
+  ${(props) => (props.$col === 'col01' ? 'width: 447px;' : '')}
+  ${(props) => (props.$col === 'col02' ? 'width: 321px;' : '')}
+  ${(props) => (props.$col === 'col03' ? 'width: 245px;' : '')}
+  ${(props) => (props.$col === 'col04' ? 'width: 60px;text-align: end;' : '')}
 `
 
 export const PlaylistTitleSvg = styled.svg`
