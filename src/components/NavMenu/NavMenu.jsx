@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import * as S from './NavMenu.styled'
 import { NavBurgerButton } from '../NavBurgerButton/NavBurgerButton'
 import { NavButton } from '../NavButtons/NavButtons'
+import { UserContext } from '../../contexts/useAuthContexts'
 
 export function NavMenu() {
   const [isVilible, setVisibility] = useState(true)
+  const user = useContext(UserContext)
 
   return (
     <S.MainNav>
@@ -21,7 +23,14 @@ export function NavMenu() {
           <S.MenuList>
             <NavButton $buttonName="Главное" Link="/" />
             <NavButton $buttonName="Мой плейлист" Link="/playlist" />
-            <NavButton $buttonName="Войти" Link="/login" />
+            <NavButton
+              handleClick={() => {
+                user.logOut()
+                user.setUser(null)
+              }}
+              $buttonName="Выйти"
+              Link="/login"
+            />
           </S.MenuList>
         )}
       </S.NavMenu>
