@@ -1,3 +1,5 @@
+# Оценочное время на работу : 2 часа, фактическое: 4.5 , так как не сразу понял, как решить задачу.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
