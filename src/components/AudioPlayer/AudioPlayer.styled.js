@@ -8,6 +8,13 @@ export const Bar = styled.div`
   background: rgba(28, 28, 28, 0.5);
 `
 
+export const BarTimer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  font-size: 12px;
+`
+
 export const BarContent = styled.div`
   display: -webkit-box;
   display: -ms-flexbox;

@@ -9,18 +9,27 @@ export function PlayerControls({
 }) {
   return (
     <S.PlayerControls>
-      <PlayerButton $buttonName="prev" />
+      <PlayerButton
+        $buttonName="prev"
+        handleClick={() => alert('Еще не реализовано')}
+      />
       <PlayerButton
         handleClick={togglePlay}
         $buttonName={`${isPlaying ? 'pause' : 'play'}`}
       />
-      <PlayerButton $buttonName="next" />
+      <PlayerButton
+        $buttonName="next"
+        handleClick={() => alert('Еще не реализовано')}
+      />
       <PlayerButton
         $buttonName="repeat"
         handleClick={toggleLoop}
         $isLooping={$isLooping}
       />
-      <PlayerButton $buttonName="shuffle" />
+      <PlayerButton
+        $buttonName="shuffle"
+        handleClick={() => alert('Еще не реализовано')}
+      />
     </S.PlayerControls>
   )
 }

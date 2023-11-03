@@ -28,6 +28,8 @@ export function MainPage() {
       })
   }, [])
 
+  // useEffect(() => setTrack(null), track)
+
   return (
     <S.Wrapper>
       <S.Container>
