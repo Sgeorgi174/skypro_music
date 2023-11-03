@@ -7,7 +7,7 @@ export function MyProfile() {
   const user = useContext(UserContext)
 
   return (
-    <S.SideBarPersonal onClick={console.log(user)}>
+    <S.SideBarPersonal>
       <S.SidebarPersonalName>{user.user.userName}</S.SidebarPersonalName>
       <SidebarLogOutButton />
     </S.SideBarPersonal>
