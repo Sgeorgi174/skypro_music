@@ -62,7 +62,7 @@ export const TrackTitleSvg = styled.svg`
 
 export const TrackTitleText = styled.div`
   ${(props) =>
-    props.isLoading
+    props.$isLoading
       ? '  width: 100%; height: 100%; background: linear-gradient(90deg, rgb(0, 0, 0),rgb(77, 77, 77), rgb(139, 139, 139));background-size: 400% 400%;animation: gradient 5s ease infinite;transform: translate3d(0, 0, 0);'
       : ''}
 `
@@ -72,7 +72,7 @@ export const TrackTitleLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: ${(props) => (props.isLoading ? 'transparent' : '#ffffff')};
+  color: ${(props) => (props.$isLoading ? 'transparent' : '#ffffff')};
 `
 
 export const TrackTitleSpan = styled.span`
@@ -84,7 +84,7 @@ export const TrackTitleSpan = styled.span`
 `
 export const TrackAuthor = styled.div`
   ${(props) =>
-    props.isLoading
+    props.$isLoading
       ? 'width: 321px;height: 100%;background: linear-gradient(90deg,  rgb(0, 0, 0),  rgb(77, 77, 77),  rgb(139, 139, 139));background-size: 400% 400%;animation: gradient 5s ease infinite;transform: translate3d(0, 0, 0);'
       : 'width: 321px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: start;-ms-flex-pack: start;justify-content: flex-start;'}
 `
@@ -95,12 +95,12 @@ export const TrackAuthorLink = styled.a`
   font-size: 16px;
   line-height: 24px;
   text-align: left;
-  color: ${(props) => (props.isLoading ? 'transparent' : '#ffffff')};
+  color: ${(props) => (props.$isLoading ? 'transparent' : '#ffffff')};
 `
 
 export const TrackAlbum = styled.div`
   ${(props) =>
-    props.isLoading
+    props.$isLoading
       ? 'width: 245px;;height: 100%;background: linear-gradient( 90deg,  rgb(0, 0, 0),  rgb(77, 77, 77),  rgb(139, 139, 139));background-size: 400% 400%;animation: gradient 5s ease infinite;transform: translate3d(0, 0, 0);'
       : 'width: 245px;'}
 `
@@ -110,7 +110,7 @@ export const TrackAlbumLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: ${(props) => (props.isLoading ? 'transparent' : '#696969')};
+  color: ${(props) => (props.$isLoading ? 'transparent' : '#696969')};
 `
 
 export const TrackTime = styled.div``

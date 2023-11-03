@@ -1,14 +1,14 @@
 import { MyProfile } from '../MyProfile/MyProfile'
 import * as S from './SideBar.styled'
 
-export function Sidebar({ isLoading }) {
+export function Sidebar({ $isLoading }) {
   return (
     <S.MainSidebar>
       <MyProfile />
       <S.SideBarBlock>
         <S.SideBarList>
           <S.SideBarItem>
-            {isLoading ? (
+            {$isLoading ? (
               <S.Skeletons />
             ) : (
               <S.SideBarLink to="/category/day's-playlist">
@@ -17,7 +17,7 @@ export function Sidebar({ isLoading }) {
             )}
           </S.SideBarItem>
           <S.SideBarItem>
-            {isLoading ? (
+            {$isLoading ? (
               <S.Skeletons />
             ) : (
               <S.SideBarLink to="/category/100hits">
@@ -26,7 +26,7 @@ export function Sidebar({ isLoading }) {
             )}
           </S.SideBarItem>
           <S.SideBarItem>
-            {isLoading ? (
+            {$isLoading ? (
               <S.Skeletons />
             ) : (
               <S.SideBarLink to="/category/indi">

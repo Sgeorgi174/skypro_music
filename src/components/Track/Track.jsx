@@ -10,31 +10,32 @@ export function Track(props) {
               <use xlinkHref="img/icon/sprite.svg#icon-note" />
             </S.TrackTitleSvg>
           </S.TrackTitleImage>
-          <S.TrackTitleText isLoading={props.isLoading}>
+          <S.TrackTitleText $isLoading={props.$isLoading}>
             <S.TrackTitleLink
               onClick={() => {
                 props.setPlay(true)
                 props.setTrack({
                   name: props.song,
                   author: props.author,
-                  trackLink: props.trackFile,
+                  trackFile: props.trackFile,
+                  duration: props.trackDuration,
                 })
               }}
-              isLoading={props.isLoading}
+              $isLoading={props.$isLoading}
             >
-              {props.isLoading ? 'waitingTrack' : props.song}{' '}
+              {props.$isLoading ? 'waitingTrack' : props.song}{' '}
               <S.TrackTitleSpan />
             </S.TrackTitleLink>
           </S.TrackTitleText>
         </S.TrackTitle>
-        <S.TrackAuthor isLoading={props.isLoading}>
-          <S.TrackAuthorLink isLoading={props.isLoading} href="http://">
-            {props.isLoading ? 'waitingAuthor' : props.author}
+        <S.TrackAuthor $isLoading={props.$isLoading}>
+          <S.TrackAuthorLink $isLoading={props.$isLoading} href="http://">
+            {props.$isLoading ? 'waitingAuthor' : props.author}
           </S.TrackAuthorLink>
         </S.TrackAuthor>
-        <S.TrackAlbum isLoading={props.isLoading}>
-          <S.TrackAlbumLink isLoading={props.isLoading} href="http://">
-            {props.isLoading ? 'waitingAlbum' : props.album}
+        <S.TrackAlbum $isLoading={props.$isLoading}>
+          <S.TrackAlbumLink $isLoading={props.$isLoading} href="http://">
+            {props.$isLoading ? 'waitingAlbum' : props.album}
           </S.TrackAlbumLink>
         </S.TrackAlbum>
         <S.TrackTime>
@@ -42,7 +43,7 @@ export function Track(props) {
             <use xlinkHref="img/icon/sprite.svg#icon-like" />
           </S.TrackTimeSvg>
           <S.TrackTimeText className="track__time-text">
-            {props.isLoading ? '0:00' : props.time}
+            {props.$isLoading ? '0:00' : props.time}
           </S.TrackTimeText>
         </S.TrackTime>
       </S.PlaylistTrack>

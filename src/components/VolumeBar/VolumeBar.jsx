@@ -1,6 +1,6 @@
 import * as S from './VolumeBar.styled'
 
-export function VolumeBar() {
+export function VolumeBar({ onChange, volumeLevel }) {
   return (
     <S.BarVolumeBlock>
       <S.VolumeContent>
@@ -10,7 +10,15 @@ export function VolumeBar() {
           </S.VolumeSvg>
         </S.VolumeImage>
         <S.VolumeProgress className="_btn">
-          <S.VolumeProgressLine className="_btn" type="range" name="range" />
+          <S.VolumeProgressLine
+            className="_btn"
+            type="range"
+            name="range"
+            min="0"
+            max="100"
+            value={volumeLevel}
+            onChange={onChange}
+          />
         </S.VolumeProgress>
       </S.VolumeContent>
     </S.BarVolumeBlock>

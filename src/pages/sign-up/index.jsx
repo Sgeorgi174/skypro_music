@@ -1,36 +1,29 @@
 import { Link } from 'react-router-dom'
-import './SignUp.styled.css'
+import * as S from './index.styled'
 
 export function SignUp() {
   return (
-    <div className="wrapper">
-      <div className="container-signup">
-        <div className="modal__block">
-          <form className="modal__form-login">
+    <S.Wrapper>
+      <S.ContainerSignup>
+        <S.ModalBlock>
+          <S.ModalFormLogin>
             <a href="../">
-              <div className="modal__logo">
-                <img src="../img/logo_modal.png" alt="logo" />
-              </div>
+              <S.ModalLogo>
+                <S.ModalLogoImg src="../img/logo_modal.png" alt="logo" />
+              </S.ModalLogo>
             </a>
-            <input
-              className="modal__input login"
-              type="text"
-              name="login"
-              placeholder="Почта"
-            />
-            <input
-              className="modal__input password-first"
+            <S.ModalInput type="text" name="login" placeholder="Почта" />
+            <S.ModalInput
               type="password"
               name="password"
               placeholder="Пароль"
             />
-            <input
-              className="modal__input password-double"
+            <S.ModalInput
               type="password"
               name="password"
               placeholder="Повторите пароль"
             />
-            <button type="button" className="modal__btn-signup-ent">
+            <S.ModalBtnSignupEnt type="button">
               <Link
                 onClick={() => {
                   localStorage.setItem('user', 'true')
@@ -39,10 +32,10 @@ export function SignUp() {
               >
                 Зарегистрироваться
               </Link>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+            </S.ModalBtnSignupEnt>
+          </S.ModalFormLogin>
+        </S.ModalBlock>
+      </S.ContainerSignup>
+    </S.Wrapper>
   )
 }
